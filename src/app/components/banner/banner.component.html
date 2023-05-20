@@ -1,0 +1,12 @@
+<div *ngIf="slides.length > 0 ">
+  <swiper-container [modules]="swiperModules"
+  (slidechange)="swiperSlideChanged($event)"
+  [loop]="true"
+  [pagination]="true"
+  [autoplay]="true">
+    <swiper-slide *ngFor="let slide of slides">
+      <img [src]="slide"/>
+    </swiper-slide>
+  </swiper-container>
+</div>
+
